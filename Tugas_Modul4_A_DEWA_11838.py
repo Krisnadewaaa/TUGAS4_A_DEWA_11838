@@ -48,11 +48,10 @@ if uploaded_file is not None:
     st.markdown("<h1 style='text-align: center;'>Unsupervised Learning - DEWA</h1>", unsafe_allow_html=True) 
     st.dataframe(input_data)
 
-model_directory = r"D:\Semester 5\Pembelajaran Mesin dan Pembelajaran Mendalam\Tugas4_A_11838"
 model_path = {
-    "KMeans_model": os.path.join(model_directory, "KMeans_model.pkl"),
-    "AGG_model": os.path.join(model_directory, "AGG_model.pkl"),
-    "DBSCAN_model": os.path.join(model_directory, "DBSCAN_model.pkl"),
+    "KMeans_model": "KMeans_model.pkl",
+    "AGG_model": "AGG_model.pkl",
+    "DBSCAN_model": "DBSCAN_model.pkl",
 }
 
 models = {}
