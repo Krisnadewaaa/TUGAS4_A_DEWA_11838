@@ -49,7 +49,7 @@ if uploaded_file is not None:
     st.dataframe(input_data)
 
 model_path = {
-    "KMeans_model": "KMeans_model.pkl",
+    "KMeans_model": "kMeans_model.pkl",
     "AGG_model": "AGG_model.pkl",
     "DBSCAN_model": "DBSCAN_model.pkl",
 }
