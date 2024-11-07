@@ -84,7 +84,9 @@ if st.sidebar.button("Prediksi"):
     cols = [col1, col2, col3]
 
     for i, (model_name, model, title, color_scale) in enumerate(cluster_method):
-        fig, new_cluster = scatter(model, model_name, input_data, new_point, features, color_scale, title)
-        cols[i].plotly_chart(fig, use_container_width=True)
+            fig, new_cluster = scatter(model, model_name, input_data, new_point, features, color_scale, title)
+            with cols[i]:
+                st.plotly_chart(fig)
+                st.markdown(f"<p style='text-align: center; '>Titik Dari Data yang baru masuk ke dalam cluster : {new_cluster}</p>", unsafe_allow_html=True)
 
     st.markdown(f"<p style='text-align: center;'>Titik Dari Data yang baru masuk ke dalam cluster : {new_cluster}</p>", unsafe_allow_html=True)
